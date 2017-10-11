@@ -1,13 +1,15 @@
-# Technologies used in this project:
+## Fullstack application written in javascript / typescript 
 
-## Core
+### Technologies used in this project:
+
+Core
 
 ```
 Ngrx/store
 Ngrx/effects
 ```
 
-## Backend
+Backend
 
 ```
 Nestjs
@@ -18,19 +20,19 @@ umzug
 .env
 ```
 
-## Web
+Web
 
 ```
 Angular
 ```
 
-## Mobile
+Mobile
 
 ```
 Ionic
 ```
 
-## Desktop
+Desktop
 
 ```
 Electron 
