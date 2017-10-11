@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Incompleted tasks
+    </ion-list-header>
+    <ion-item-sliding *ngFor="let t of unfineshedTodos$ | async">
+      <ion-item>
+        <ion-label>{{t.title}}</ion-label>
+        <ion-checkbox color="dark" checked="t.completed" (ionChange)="setCompleted(t)"></ion-checkbox>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="delete(t)">
+            <ion-icon name="trash"></ion-icon> Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item *ngIf="!(unfineshedTodos$ | async).length">
+      No incompleted tasks
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Completed tasks
+    </ion-list-header>
+
+    <ion-item-sliding *ngFor="let t of finishedTodos$ | async">
+      <ion-item>
+        {{t.title}}
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="delete(t)">
+                    <ion-icon name="trash"></ion-icon> Delete
+                </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item *ngIf="!(finishedTodos$ | async).length">
+      No completed tasks
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-fab bottom right>
+        <button ion-fab (click)="displayAddModal()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab> 
+</ion-footer>

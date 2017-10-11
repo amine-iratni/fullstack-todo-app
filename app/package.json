@@ -1,0 +1,24 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandru Bereghici",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.2.0",
+    "@angular/core": "^4.2.0",
+    "@angular/http": "^4.2.0",
+    "@ngrx/core": "1.2.0",
+    "@ngrx/effects": "4.0.5",
+    "@ngrx/store": "4.0.3",
+    "@ngrx/store-devtools": "4.0.0",
+    "ngrx-store-freeze": "0.1.9",
+    "rxjs": "^5.4.1",
+    "reselect": "3.0.1",
+    "tassign": "1.0.0"
+  }
+}
