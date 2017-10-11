@@ -15,6 +15,7 @@ express
 Sequelize
 Jsonwebtoken
 umzug
+.env
 ```
 
 ## Web
